@@ -15,7 +15,6 @@ body{
     flex-direction: column;
 }
 
-
 #logo{
     width: 40vw;
     padding-top: 90px;
@@ -57,17 +56,6 @@ cursor: pointer;
     box-shadow: 2px 2px 20px rgb(21, 145, 207),2px 2px 20px rgb(201, 41, 116);
     letter-spacing: 2px;
 }
-
-
-
-
-
-
-
-
-
-
-
 body {
     margin: 0;
     overflow: hidden; /* Prevent scrollbars from appearing */
