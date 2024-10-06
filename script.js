@@ -48,7 +48,7 @@ function takeCommand(message) {
     if (message.includes("hello")|| message.includes("hey") || message.includes("hi") || message.includes("leo")) {
         speak("Hello sir, How can I assist you today?")
     } 
-    else if (message.includes("who are you") || message.includes("tell me about yourself") || message.includes("introduce yourself")) {
+    else if (message.includes("who are you") || message.includes("tell me about yourself") || message.includes("introduce yourself") || message.includes("hu r u")) {
         speak("I am your virtual assistant, created by Ali")
     }
     else if (message.includes("time")) {
@@ -85,7 +85,6 @@ function takeCommand(message) {
         }
     }
     else {
-        // Apply replacements and perform Google search
         let cleanedMessage = message
             .replace("search", "")
             .replace("Leo", "")
