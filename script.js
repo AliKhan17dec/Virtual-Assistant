@@ -49,7 +49,10 @@ function takeCommand(message) {
         speak("Hello sir, How can I assist you today?")
     } 
     else if (message.includes("who are you") || message.includes("tell me about yourself") || message.includes("introduce yourself") || message.includes("hu r u") || message.includes("what is your name")) {
-        speak("I am leo your virtual assistant, created by Ali")
+        speak("I am leo, your virtual assistant, created by Ali")
+    }
+    else if (message.includes("how are you") || message.includes("how r u") || message.includes("are you ok") || message.includes("are you okay")) {
+        speak("I am good, how are you")
     }
     else if (message.includes("time")) {
         let time = new Date().toLocaleString(undefined, { hour: "numeric", minute: "numeric" })
