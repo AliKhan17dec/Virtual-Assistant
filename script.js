@@ -73,20 +73,26 @@ function takeCommand(message) {
         }
     } 
     else if (message.includes("weather")) {
-        // Placeholder for weather API integration
         let city = message.split("in ")[1] || "your location";
         speak(`Fetching weather information for ${city}...`)
         window.open(`https://www.google.com/search?q=weather+in+${city}`, "_blank")
     }
+  
+
     else if (message.includes("calculate") || message.includes("math")) {
-        let expression = message.replace("calculate", "").replace("math", "").trim()
+        let expression = message.replace("calculate", "").replace("math", "").trim();
+        
+        expression = expression.replace(/times/g, '*').replace(/x/g, '*');
+    
         try {
-            let result = eval(expression)
-            speak(`The result of ${expression} is ${result}`)
+            let result = eval(expression);
+            speak(`The result of ${expression} is ${result}`);
         } catch (error) {
-            speak("I couldn't calculate that. Could you please try again?")
+            speak("I couldn't calculate that. Could you please try again?");
         }
     }
+    
+
     else {
         let cleanedMessage = message
             .replace("search", "")
@@ -102,3 +108,6 @@ function takeCommand(message) {
         }
     }
 }
+
+
+
